@@ -1,0 +1,55 @@
+$avatar-width: 43px;
+$notification-gap: 1em;
+
+.base-notification {
+  padding: 1em;
+
+  border-radius: 0.5em;
+}
+
+.featured {
+  background-color: var(--gray-200);
+}
+
+.details {
+  grid-area: details;
+}
+
+.notification {
+  column-gap: $notification-gap;
+
+  @extend .base-notification;
+}
+
+.avatar {
+  grid-area: avatar;
+
+  max-width: $avatar-width;
+}
+
+.created-at {
+  grid-area: created-at;
+
+  color: var(--blue-100);
+}
+
+.author {
+  font-weight: var(--bold);
+
+  color: var(--blue-400);
+}
+
+.content {
+  font-weight: var(--bold);
+
+  color: var(--blue-200);
+
+  @extend .hide-on-empty !optional;
+}
+
+.middot {
+  color: var(--red-100);
+}
+
+.type {
+}

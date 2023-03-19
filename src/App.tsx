@@ -1,10 +1,15 @@
-import { useState } from "react"
-
 import styles from "./App.module.scss"
-import reactLogo from "./assets/react.svg"
+import NotificationsList, {
+  NotificationType,
+} from "./components/NotificationsList/NotificationsList"
+import notifications from "./data/notifications.json"
 
 function App() {
-  return <div></div>
+  return (
+    <main className={styles["main"]}>
+      <NotificationsList notifications={notifications as NotificationType[]} />
+    </main>
+  )
 }
 
 export default App

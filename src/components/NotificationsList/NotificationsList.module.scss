@@ -1,0 +1,51 @@
+.notifications-list {
+  display: grid;
+  grid-auto-rows: auto;
+  gap: 0.5em;
+
+  max-width: 650px;
+}
+
+.notifications-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+  background-color: var(--white);
+
+  border-radius: 1em;
+
+  padding: 1.5em;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-weight: var(--bold);
+
+  gap: 0.8em;
+}
+
+.header {
+  font-size: 1.75em;
+
+  color: var(--blue-400);
+}
+
+.featured-count {
+  padding: 0.2em 0.75em;
+
+  border-radius: 0.5em;
+
+  background-color: var(--blue-300);
+
+  color: var(--white);
+}
+
+.mark-all-btn {
+  margin-left: auto;
+}

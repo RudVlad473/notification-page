@@ -1,0 +1,23 @@
+@use "../../stylesheets/components/notification" as *;
+
+.notification {
+  display: grid;
+  grid-template-areas:
+    "avatar details"
+    "avatar created-at"
+    "avatar content";
+
+  justify-content: start;
+}
+
+.message {
+  padding: 1em;
+
+  border: 1px solid var(--gray-100);
+  border-radius: 0.25em;
+
+  margin-top: $notification-gap;
+
+  color: var(--blue-200) !important;
+  font-weight: var(--normal) !important;
+}

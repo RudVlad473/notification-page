@@ -1,3 +1,8 @@
+@use "../../stylesheets/abstracts/breakpoints/" as *;
+
+$notification-section-padding: 1.5em;
+$header-font-size: 1.75em;
+
 .notifications-list {
   display: grid;
   grid-auto-rows: auto;
@@ -17,7 +22,7 @@
 
   border-radius: 1em;
 
-  padding: 1.5em;
+  padding: $notification-section-padding;
 }
 
 .heading {
@@ -31,7 +36,7 @@
 }
 
 .header {
-  font-size: 1.75em;
+  font-size: $header-font-size;
 
   color: var(--blue-400);
 }
@@ -52,8 +57,31 @@
   outline: none;
   border: none;
   background-color: transparent;
-  
 
   color: var(--blue-200);
   font-weight: var(--normal);
+
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    color: var(--blue-300);
+  }
+}
+
+@media only screen and (max-width: $small) {
+  .notifications-section {
+    width: 100%;
+
+    box-shadow: none;
+
+    border-radius: none;
+
+    padding: $notification-section-padding * 0.5;
+  }
+
+  .header {
+    font-size: $header-font-size * 0.8;
+
+    color: var(--blue-400);
+  }
 }

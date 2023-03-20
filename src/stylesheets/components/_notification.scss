@@ -39,6 +39,13 @@ $notification-gap: 1em;
   font-weight: var(--bold);
 
   color: var(--blue-400);
+
+  transition: color 0.1s ease-out;
+
+  &:hover {
+    color: var(--blue-300);
+    cursor: pointer;
+  }
 }
 
 .content {
@@ -50,7 +57,6 @@ $notification-gap: 1em;
 }
 
 .middot {
- 
   // color: var(--red-100);
 
   // transform: scale(3) translateY(-7.5%);

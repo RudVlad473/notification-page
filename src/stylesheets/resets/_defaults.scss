@@ -11,6 +11,13 @@ body {
 
   background-color: var(--gray-200);
 
-
   padding: 4em;
+}
+
+@media only screen and (max-width: $small) {
+  body {
+    padding: 0px;
+
+    font-size: 90%;
+  }
 }

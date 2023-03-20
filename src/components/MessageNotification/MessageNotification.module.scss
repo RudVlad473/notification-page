@@ -20,4 +20,10 @@
 
   color: var(--blue-200) !important;
   font-weight: var(--normal) !important;
+
+  transition: all 0.1s ease-out;
+
+  &:hover {
+    background-color: var(--gray-100);
+  }
 }

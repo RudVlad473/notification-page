@@ -48,4 +48,12 @@
 
 .mark-all-btn {
   margin-left: auto;
+
+  outline: none;
+  border: none;
+  background-color: transparent;
+  
+
+  color: var(--blue-200);
+  font-weight: var(--normal);
 }

@@ -1,5 +1,7 @@
-import { FC } from "react"
+import { FC, useContext } from "react"
 
+import { NotificationsContext } from "../../context/notificationsContext"
+import { markAllRead } from "../../reducers/notifications"
 import Notification from "../Notification/Notification"
 import styles from "./NotificationsList.module.scss"
 
@@ -25,13 +27,23 @@ const NotificationsList: FC<{ notifications: NotificationType[] }> = ({
     0
   )
 
+  const { dispatchNotifications } = useContext(NotificationsContext)
+
   return (
     <section className={styles["notifications-section"]}>
       <header className={styles["heading"]}>
         <h1 className={styles["header"]}>Notifications</h1>
-        <div className={styles["featured-count"]}>{newNotifications}</div>
+        {newNotifications > 0 && (
+          <div className={styles["featured-count"]}>{newNotifications}</div>
+        )}
 
-        <button className={styles["mark-all-btn"]}>Mark all as read</button>
+        <button
+          className={styles["mark-all-btn"]}
+          onClick={() => {
+            dispatchNotifications(markAllRead())
+          }}>
+          Mark all as read
+        </button>
       </header>
       <ul className={styles["notifications-list"]}>
         {notifications.map((notification) => (

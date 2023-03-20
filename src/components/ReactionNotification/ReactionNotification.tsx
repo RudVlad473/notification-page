@@ -3,6 +3,7 @@ import { FC } from "react"
 
 import { getPictureByName } from "../../utils/getPictureByName"
 import { NotificationType } from "../NotificationsList/NotificationsList"
+import Middot from "../UI/Middot/Middot"
 import styles from "./ReactionNotification.module.scss"
 
 const ReactionNotification: FC<NotificationType> = ({
@@ -28,10 +29,10 @@ const ReactionNotification: FC<NotificationType> = ({
       </div>
 
       <div className={"details"}>
-        <span className={"author"}>{author}</span>{" "}
+        <span className={classNames("author", styles["author"])}>{author}</span>{" "}
         <span className={"type"}>{type}</span>{" "}
-        <span className={"content"}>
-          {content} {!isRead && <span className={"middot"}>&middot;</span>}
+        <span className={classNames("content", styles["content"])}>
+          {content} {!isRead && <Middot />}
         </span>
       </div>
 

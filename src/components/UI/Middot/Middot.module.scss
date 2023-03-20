@@ -1,0 +1,20 @@
+$middot-size: 8px;
+
+.middot {
+  display: inline-block !important;
+
+  aspect-ratio: 1;
+  width: $middot-size;
+  max-width: $middot-size;
+  min-width: $middot-size;
+
+  background-color: var(--red-100);
+
+  border-radius: 50%;
+
+  color: transparent;
+
+  margin-inline: 5px;
+
+  translate: 0 -10%;
+}

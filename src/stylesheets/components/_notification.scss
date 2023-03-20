@@ -7,10 +7,6 @@ $notification-gap: 1em;
   border-radius: 0.5em;
 }
 
-.featured {
-  background-color: var(--gray-200);
-}
-
 .details {
   grid-area: details;
 }
@@ -19,6 +15,12 @@ $notification-gap: 1em;
   column-gap: $notification-gap;
 
   @extend .base-notification;
+
+  transition: all 0.15s ease-in;
+}
+
+.featured {
+  background-color: var(--gray-200);
 }
 
 .avatar {
@@ -48,7 +50,18 @@ $notification-gap: 1em;
 }
 
 .middot {
-  color: var(--red-100);
+ 
+  // color: var(--red-100);
+
+  // transform: scale(3) translateY(-7.5%);
+  // transform-origin: center;
+  // display: inline-block;
+
+  // border-radius: 100%;
+
+  // padding-inline: 5px;
+
+  // max-height: 100%;
 }
 
 .type {

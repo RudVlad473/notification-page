@@ -4,7 +4,7 @@ import styles from "./App.module.scss"
 import NotificationsList, {
   NotificationType,
 } from "./components/NotificationsList/NotificationsList"
-import { NotificationsContext } from "./context/notificationsContext"
+import { NotificationsContext } from "./context/NotificationsContext"
 import initialNotifications from "./data/notifications.json"
 import { notificationsReducer } from "./reducers/notifications"
 

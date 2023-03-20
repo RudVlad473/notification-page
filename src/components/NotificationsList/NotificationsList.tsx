@@ -1,6 +1,6 @@
 import { FC, useContext } from "react"
 
-import { NotificationsContext } from "../../context/notificationsContext"
+import { NotificationsContext } from "../../context/NotificationsContext"
 import { markAllRead } from "../../reducers/notifications"
 import Notification from "../Notification/Notification"
 import styles from "./NotificationsList.module.scss"

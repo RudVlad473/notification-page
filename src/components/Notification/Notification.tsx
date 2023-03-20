@@ -3,6 +3,7 @@ import React, { FC } from "react"
 
 import MessageNotification from "../MessageNotification/MessageNotification"
 import { NotificationType } from "../NotificationsList/NotificationsList"
+import PictureNotification from "../PictureNotification/PictureNotification"
 import ReactionNotification from "../ReactionNotification/ReactionNotification"
 
 function getNotificationTypeComponent(
@@ -19,7 +20,7 @@ function getNotificationTypeComponent(
       return <ReactionNotification {...notification} />
     }
     case "commented on your picture": {
-      return <ReactionNotification {...notification} />
+      return <PictureNotification {...notification} />
     }
     case "sent you a private message": {
       return <MessageNotification {...notification} />

@@ -1,0 +1,29 @@
+@use "../ReactionNotification/ReactionNotification.module.scss" as r;
+@use "../../stylesheets/components/" as c;
+
+.notification {
+  @extend r, .notification !optional;
+  grid-template-areas:
+    "avatar details    content"
+    "avatar created-at content";
+  grid-auto-columns: auto auto 1fr;
+  // align-items: end;
+}
+
+.details {
+  
+}
+
+.created-at {
+  
+}
+
+.content {
+  justify-self: end;
+
+  grid-area: content;
+
+  max-width: c.$avatar-width;
+
+  display: inline-block;
+}

@@ -1,5 +1,7 @@
 # notification-page
 
+# [See the project in action](https://notification-page-omega.vercel.app/)
+
 A page where user can view a variaty of different notification types and mark them as viewed.
 
 # Technologies
